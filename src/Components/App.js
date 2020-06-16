@@ -29,20 +29,6 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        {/* <div className="filterContainer">
-          <div className="filterGoLeft"
-          onClick={()=>{
-            this.setState({index:this.state.index-1<0?this.state.category.length-1:this.state.index-1},
-              ()=>this.swiper.update())
-          }}>&lt;</div>
-          <div className="filterData">{this.state.category[this.state.index]}</div>
-          <div className="filterGoLeft"
-          onClick={()=>{
-            this.setState({index:(this.state.index+1)%this.state.category.length},
-            ()=>this.swiper.update())
-          }}
-          >&gt;</div>
-        </div> */}
         <div className="swiperMainContainer">
           {/* Here we will be adding swiper container */}
           <div className="swiper-container">
@@ -53,7 +39,6 @@ class App extends React.Component {
                 if(el===currentSection || currentSection==="All"){
                   return(
                     <div className="swiper-slide" key={index}>
-                      {/* <div>{el}</div> */}
                       <div class="image-holder">
                         <img src="http://www.coxreps.com/rf/image_medium/Pub/Web/CoxReps/Images/smartlocal-hero.jpg" alt="smart, local media. national scale." title="smart, local media. national scale." />
                       </div>
@@ -63,10 +48,6 @@ class App extends React.Component {
                             <p>400+ best-in-class local broadcast television stations covering more than 87% of U.S. TV households</p>
                         </div>
                       </div>
-                      {/* <div class="imgCardHolder">
-                        <img src={`https://www.coxreps.com/rf/image_medium/Pub/Web/CoxReps/Images/experts-hero.jpg`} alt="images"/>
-                      </div> */}
-                      {/* <div>Demo Purposes</div> */}
                     </div>
                   )}
                   else{
